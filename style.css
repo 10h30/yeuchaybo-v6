@@ -868,6 +868,10 @@ th {
 	clear: both;
 }
 
+.home .site-inner {
+	margin-top: 61px;
+}
+
 .blog .site-inner,
 .archive .site-inner,
 .search-results .site-inner {
@@ -1405,7 +1409,7 @@ img.alignright,
 /* ## Site Header
 --------------------------------------------- */
 .site-header {
-	/*position: absolute;*/
+	position: absolute;
 	z-index: 100;
 	width: 100%;
 	border-bottom: 1px solid rgba(198, 202, 206, 0.3);
@@ -1413,12 +1417,9 @@ img.alignright,
 	transition: all 0.3s ease;
 }
 
-.site-header.shrink {
-	position: fixed;
-}
-
 .sticky-header .site-header {
 	position: fixed;
+	top: 0;
 }
 
 .sticky-header .site-header.shrink {
@@ -1452,14 +1453,6 @@ img.alignright,
 .no-js .site-header > .wrap {
 	height: auto;
 	padding: 3rem 6vw;
-}
-
-.bumper {
-	height: 61px;
-}
-
-.hidden {
-	display: none;
 }
 
 /* ## Title Area
@@ -1902,7 +1895,6 @@ img.alignright,
 .nav-secondary.activated {
 	right: 0;
 	left: auto;
-	z-index: 1;
 	box-shadow: 0 0 4rem rgba(42, 49, 57, 0.2);
 }
 
@@ -2001,7 +1993,7 @@ img.alignright,
 .menu-toggle {
 	display: block;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 	height: auto;
 	margin-right: -0.5em;
 	padding: 1em 0.5em;
@@ -2579,6 +2571,24 @@ img.alignright,
 
 .pingback:last-of-type p {
 	margin-bottom: 0;
+}
+
+.lead {
+	font-style: italic;
+	text-align: center;
+	font-weight: 400;
+	color: #222222;
+	font-size: 120%;
+	line-height: 2;
+	padding: 0 20px 0;
+}
+
+.lead:after {
+	display: block;
+	content: '';
+	width: 33%;
+	margin: 50px auto 60px;
+	border-bottom: 2px solid #eeeeee;
 }
 
 /* ## Sidebars
@@ -4581,6 +4591,9 @@ ul.testimonials-list h5 {
 }
 
 @media (min-width: 896px) {
+	.home .site-inner {
+		margin-top: 101px;
+	}
 	.content-sidebar-wrap {
 		display: flex;
 		padding: 0;
@@ -4639,22 +4652,16 @@ ul.testimonials-list h5 {
 		bottom: 0;
 		margin: auto 1em auto 0;
 	}
-	.site-header.shrink > .wrap {
-		height: 7rem;
-	}
 	.sticky-header .site-header.shrink > .wrap {
 		height: 7rem;
 	}
 	.site-header > .wrap {
-		height: 7rem;
+		height: 10rem;
 		padding: 0;
 		flex-wrap: nowrap;
 	}
 	.no-js .site-header > .wrap {
 		padding: 0;
-	}
-	.bumper {
-		height: 71px;
 	}
 	.site-description {
 		line-height: 1.382;
@@ -4832,6 +4839,10 @@ ul.testimonials-list h5 {
 	}
 	.pagination {
 		padding: 5rem 0;
+	}
+	.lead {
+		margin: 50px -50px;
+		font-size: 140%;
 	}
 	.wpmenucart-contents {
 		margin-left: 1em;

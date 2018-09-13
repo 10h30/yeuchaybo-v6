@@ -513,3 +513,24 @@
 .pingback:last-of-type p {
 	margin-bottom: 0;
 }
+
+.lead {
+	font-style: italic;
+    text-align: center;
+    font-weight: 400;
+    color: #222;
+    font-size: 120%;
+    line-height: 2;
+	padding: 0 20px 0;
+	@include breakpoint(md) {
+		margin: 50px -50px;
+		font-size: 140%;
+	}
+	&:after {
+		display: block;
+		content: "";
+		width: 33%;
+		margin: 50px auto 60px;
+		border-bottom: 2px solid #eee;
+	}
+}

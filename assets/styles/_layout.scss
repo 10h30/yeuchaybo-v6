@@ -33,6 +33,12 @@
 
 .site-inner {
 	clear: both;
+	.home & {
+		margin-top: 61px;
+		@include breakpoint(md) {
+			margin-top: 101px;
+	}
+	}
 
 	.blog &,
 	.archive &,

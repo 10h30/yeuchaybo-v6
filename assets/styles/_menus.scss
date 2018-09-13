@@ -274,7 +274,6 @@
 	&.activated {
 		right: 0;
 		left: auto;
-		z-index: 1;
 		box-shadow: 0 0 4rem rgba($dark, 0.2);
 
 		@include breakpoint(sm) {
@@ -421,7 +420,7 @@
 .menu-toggle {
 	display: block;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 	height: auto;
 	margin-right: -0.5em;
 	padding: 1em 0.5em;

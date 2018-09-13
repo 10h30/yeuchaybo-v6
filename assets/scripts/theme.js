@@ -10,18 +10,12 @@
 		var scroll = $( window ).scrollTop();
 		var height = $( '.hero-section' ).outerHeight();
 		var header = $( '.before-header' ).outerHeight();
-		var siteheader = $( '.site-header' ).outerHeight();
-		if ( scroll >= 1 ) {
+		if ( scroll >= 40 ) {
 			$( '.site-header' ).addClass( 'shrink' );
-			$('.bumper').removeClass('hidden');
 		} else {
 			$( '.site-header' ).removeClass( 'shrink' );
-			$('.bumper').addClass('hidden');
-
 		}
 	} );
-
-	$(".site-header").after('<div class="bumper hidden"></div>');
 
 	/*
 	 * Search form toggle.

@@ -2,27 +2,17 @@
 --------------------------------------------- */
 
 .site-header {
-	/*position: absolute;*/
+	position: absolute;
 	z-index: 100;
 	width: 100%;
 	border-bottom: 1px solid rgba($gray, 0.3);
 	background-color: $white;
-	&.shrink {
-		position: fixed;
-
-		> .wrap {
-
-			@include breakpoint(md) {
-				height: 7rem;
-			}
-		}
-	}
 
 	@include transition;
 
 	.sticky-header & {
 		position: fixed;
-
+		top: 0;
 		&.shrink {
 			background-color: $white;
 			box-shadow: 0 0 4rem rgba($dark, 0.05);
@@ -59,7 +49,7 @@
 		flex-wrap: wrap;
 
 		@include breakpoint(md) {
-			height: 7rem;
+			height: 10rem;
 			padding: 0;
 			flex-wrap: nowrap;
 		}
@@ -74,18 +64,6 @@
 		}
 	}
 }
-
-.bumper {
-	height: 61px;
-	@include breakpoint(md) {
-		height: 71px;
-	}
-}
-
-.hidden{
-    display: none;
-}
-
 
 /* ## Title Area
 --------------------------------------------- */
