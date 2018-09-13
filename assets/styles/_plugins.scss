@@ -1,0 +1,720 @@
+/* ## Genesis eNews Extended
+--------------------------------------------- */
+
+.sidebar {
+
+	.enews {
+
+		input {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.site-footer {
+
+	.enews {
+
+		form {
+			position: relative;
+			margin-top: 0.618em;
+		}
+
+		input[type="text"],
+		input[type="email"] {
+			margin-top: 1rem;
+		}
+
+		input[type="submit"] {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			padding-right: 0;
+			color: transparent;
+			background: transparent;
+			box-shadow: none;
+
+			&:hover,
+			&:focus {
+
+				+ .send-icon {
+					opacity: 1;
+				}
+			}
+		}
+
+		.send-icon {
+			display: block;
+			position: absolute;
+			right: 2em;
+			bottom: 1em;
+			width: 1.8rem;
+			height: 1.8rem;
+			margin: 0;
+			opacity: 0.236;
+			background: center / contain no-repeat url(assets/images/paper-plane.svg);
+			pointer-events: none;
+
+			@include transition;
+		}
+	}
+}
+
+/* ## Genesis Portfolio Pro
+--------------------------------------------- */
+
+.archive.genesis-pro-portfolio {
+
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.entry {
+		width: 100%;
+		margin: 0 0 6vw;
+		padding: 0;
+		border: 0;
+
+		@include overlay;
+
+		@include breakpoint(xs) {
+			width: $one-half;
+			margin-bottom: 2.5rem;
+			margin-left: $margin;
+
+			&:nth-of-type(odd) {
+				margin-left: 0;
+			}
+		}
+
+		&:before {
+			opacity: 0;
+		}
+
+		&:hover,
+		&:focus {
+
+			&:before {
+				opacity: 1;
+			}
+
+			.entry-header {
+				top: 0;
+				bottom: 0;
+				margin: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	.entry-header {
+		display: flex;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin-top: 100%;
+		opacity: 0;
+		pointer-events: none;
+		align-items: center;
+		justify-content: center;
+
+		@include transition;
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+/* ## Genesis Simple FAQs
+--------------------------------------------- */
+
+div.gs-faq {
+	padding: 0;
+	border-top: $site-border;
+	box-shadow: $site-shadow;
+
+	.gs-faq__question {
+		display: block;
+		position: relative;
+		z-index: 1;
+		height: auto;
+		margin: 0;
+		padding: 1.5em 3em 1.5em 1.5em;
+		border: $site-border;
+		border-top: 0;
+		border-radius: 0;
+		color: $dark;
+		background-color: $white;
+		box-shadow: none;
+		font-size: 1.8rem;
+		font-weight: $bolder;
+		line-height: 1;
+
+		&:hover,
+		&:focus {
+			color: $accent;
+		}
+
+		&:after {
+			position: absolute;
+			top: 1.5em;
+			right: 1em;
+			line-height: 1;
+			content: "+";
+		}
+
+		&.gs-faq--expanded {
+
+			&:after {
+				content: "-";
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.gs-faq__answer {
+		margin: 0;
+		padding: 3rem;
+		border: $site-border;
+		border-top: 0;
+		background-color: $white;
+	}
+}
+
+/* ## Genesis Simple Share
+--------------------------------------------- */
+
+.share-after {
+	margin-top: 4rem;
+}
+
+/* ## Genesis Testimonial Slider
+--------------------------------------------- */
+
+.lSSlideWrapper {
+	max-width: calc(100% + 4em);
+	margin: 0 -2em;
+}
+
+.gts-rating {
+	margin: 1em auto -1em;
+}
+
+.lSSlideOuter {
+	width: 100%;
+}
+
+.lSSlideOuter .lSPager,
+.lSSlideOuter .lightSlider {
+	height: auto !important;
+}
+
+ul.testimonials-list {
+
+	li {
+
+		&:before {
+			display: block;
+			margin: 0 0 -0.5em;
+			color: rgba($dark, 0.2);
+			font-family: $font-serif;
+			font-size: 8rem;
+			line-height: 1;
+			content: "“";
+		}
+	}
+
+	blockquote {
+		padding: 0 2em 1em;
+		border: 0;
+	}
+
+	img {
+		width: 6rem;
+		margin: 2rem auto;
+	}
+
+	h5 {
+		color: $dark;
+		font-size: 1em;
+	}
+}
+
+.lSSlideOuter .lSPager.lSpg > li a {
+	opacity: 0.1;
+	background-color: $dark;
+}
+
+.lSSlideOuter .lSPager.lSpg > li.active a,
+.lSSlideOuter .lSPager.lSpg > li:hover a {
+	opacity: 0.3;
+	background-color: $dark;
+}
+
+.gts-company {
+	display: block;
+	margin-bottom: 1em;
+	font-size: small;
+}
+
+/* ## Google Map
+--------------------------------------------- */
+
+.agm-canvas {
+
+	.contact-page & {
+
+		@media (max-width: map-get($breakpoints, sm)) {
+			height: 30rem !important;
+		}
+
+		&:before {
+			//content: "";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($dark, 0.618);
+		}
+	}
+}
+
+/* ## Ninja Forms
+--------------------------------------------- */
+
+.nf-field {
+
+	.nf-field-element {
+
+		input,
+		select {
+			height: 3em;
+		}
+	}
+}
+
+/* ## SEO Slider
+--------------------------------------------- */
+
+.slick-slide {
+
+	.slick-initialized & {
+		display: flex;
+	}
+
+	.no-js &:first-of-type {
+		display: block;
+		width: 100%;
+	}
+}
+
+.slick-arrow {
+	box-shadow: none;
+}
+
+/* ## Simple Social Icons
+--------------------------------------------- */
+
+.simple-social-icons {
+	overflow: hidden;
+
+	svg {
+
+		&[class^="social-"],
+		&[class*=" social-"] {
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			stroke-width: 0;
+			stroke: currentColor;
+			fill: currentColor;
+		}
+	}
+
+	ul {
+		display: flex;
+		margin: -0.5em -0.5em 0 0;
+		padding: 0;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+
+		li {
+			margin: 0.5em 0.5em 0 0;
+			padding: 0;
+			border: none;
+			background: none;
+			list-style-type: none;
+
+			a {
+				display: inline-block;
+				-moz-box-sizing: content-box;
+				-webkit-box-sizing: content-box;
+				box-sizing: content-box;
+				width: 1em;
+				height: 1em;
+				margin: 2px;
+				border: none;
+				font-weight: $normal;
+				font-style: normal;
+				font-variant: normal;
+				line-height: 1;
+				text-align: center;
+				text-decoration: none;
+				text-transform: none;
+			}
+		}
+
+		&.aligncenter {
+			justify-content: center;
+		}
+
+		&.alignleft {
+			justify-content: flex-start;
+		}
+
+		&.alignright {
+			justify-content: flex-end;
+		}
+	}
+}
+
+/* ## WooCommerce Menu Cart
+--------------------------------------------- */
+
+.wpmenucartli {
+	margin-top: 1em;
+}
+
+.wpmenucart-contents {
+	position: relative;
+	margin-top: 1em;
+	color: $dark;
+	font-size: 1.8rem;
+	text-decoration: none;
+
+	@include breakpoint(md) {
+		margin-left: 1em;
+	}
+
+	.cartcontents {
+		display: flex;
+		position: absolute;
+		top: -0.4rem;
+		right: -0.4rem;
+		width: 1.2rem;
+		height: 1.2rem;
+		border-radius: 1.2rem;
+		color: $white;
+		background-color: $accent;
+		box-shadow: 0 0 0 1px $white;
+		font-size: 0.7rem;
+		font-weight: $bold;
+		line-height: 1;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* ## WP Featherlight
+--------------------------------------------- */
+
+.featherlight .featherlight-close-icon {
+	box-shadow: none;
+}
+
+
+/* ## Event Manager
+--------------------------------------------- */
+
+.single-event {
+    /*&.full-width-content .content {
+        max-width: 100%;
+	}*/
+	.event-map {
+		flex: 1 1 100%;
+		margin-top: 30px;
+		max-height: 100%!important;
+		height: 300px;
+		@include breakpoint(md) {
+			flex: 1 1 100%;
+			margin-top: 0;
+		}
+	 }
+    .event-info-wrapper {
+        margin: 0 auto 40px;
+        display: flex;
+        flex-wrap: wrap;
+        @include breakpoint(md){
+            box-shadow: $box-shadow;
+        }
+        .event-info {
+            box-shadow: $box-shadow;
+            flex: 1 1 100%;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            p {
+                margin-bottom: 15px;
+			}
+			div {
+				margin-bottom: 15px;
+				text-align: left;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+				@include breakpoint(md){
+					display: flex;
+					flex-wrap: wrap;
+				}
+				dt {
+					@include breakpoint(md){
+						flex: 0 1 120px;
+						font-weight: 700;
+					}
+				}
+				dd {
+					@include breakpoint(md){
+						flex: 1 1 auto;
+						margin-left: 0;
+					}
+				}
+			}
+			
+            @include breakpoint(md) {
+                box-shadow: none;
+                flex: 1 1 100%;
+                padding: 60px;
+                text-align: unset;
+                margin: 0 auto 0px;
+                max-width: 760px;
+            }
+            a ion-icon {
+                border-radius: 50%;
+                background: #8c8c8c;
+                font-size: 16px;
+                padding: 10px;
+                color: #FFF;
+                margin-right: 10px;
+                &:hover {
+                    background: red;
+                }
+            }
+         }
+        
+         .event-register {
+             text-align: center;
+             margin-top: 40px;
+             flex: 1 1 100%;
+         }
+    }
+    .event-meta {
+		margin-bottom: 20px;
+		color: $white;
+        > span {
+            padding: 0 10px;
+        }
+        .event-location:before {
+            font-family: ionicons;
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: inherit;
+            content: "\f455";
+            margin-right: 10px;
+        }
+        .event-start-date:before {
+            font-family: ionicons;
+            content: "\f3f3";
+            margin-right: 10px;
+        }
+    }
+    .event-hero {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: column;
+            min-height: 80vh;
+            text-align: center;
+            justify-content: center;
+            color: #FFF;
+            .entry-title {
+                font-size: 5.2rem;
+            }
+        }
+    }
+
+    .event-button {
+        a + a {
+            margin-left: 10px;
+        }
+        .button.register {
+            background: $accent;
+        }
+    }
+
+    .event-related-wrapper {
+        display: flex;
+		flex-wrap: wrap;
+		margin-top: 40px;
+        @include breakpoint(md) {
+            margin: 40px -70px 30px;
+		}
+		.event-related-title {
+			flex: 0 0 100%;
+		}
+        .event-related-item {
+            flex: 1 1 calc((100% - 40px) / 2);
+			margin: 0 10px 40px;
+			position: relative;
+            @include breakpoint(md) {
+                flex: 0 1 calc((100% - 60px)/3);
+                img {
+                    width: 100%;
+                }
+			}
+			.event-date {
+				position: absolute;
+				font-size: 12px;
+				top: 0;
+				padding: 5px 10px;
+				background: rgba(0,0,0, 0.5);
+				color: $white;
+			}
+			.event-title {
+				font-size: 16px;
+				margin-top: 10px;
+				a {
+					text-decoration: none;
+				}
+			}
+        }
+	}
+}
+
+.event-frontpage-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 40px;
+	.event-item {
+		flex: 1 1 calc((100% - 40px) / 2);
+		margin: 0 10px 40px;
+		position: relative;
+		@include breakpoint(md) {
+			flex: 0 1 calc((100% - 60px)/3);
+			img {
+				width: 100%;
+			}
+		}
+		.event-date {
+			position: absolute;
+			font-size: 12px;
+			top: 0;
+			padding: 5px 10px;
+			background: rgba(0,0,0, 0.5);
+			color: $white;
+		}
+		.event-title {
+			font-size: 20px;
+			margin-top: 10px;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* ## Genesis Featured Post Combo
+--------------------------------------------- */
+.site-footer .gfpc-featured-posts {
+    .entry-title {
+        font-size: 1.8rem;
+    }
+    article {
+        margin-bottom: 20px;
+    }
+}
+
+.gfpc-featured-posts {
+	.entry-content {
+		clear: unset;
+		&:before {
+			clear: unset;
+		}
+	}
+}
+
+.home .gfpc-overlay-entry {
+	height: unset;
+   	padding: unset;
+	position: unset;
+	@include breakpoint(md) {
+		padding: 15px 30px;
+		height: 100%;
+		position: absolute;
+	}
+	&.bottom {
+		width: 100%;
+		margin-top: 20px;
+		.entry-title a {
+			color: black;
+			font-size: 26px;
+		}
+		@include breakpoint(md){
+			background: rgba(255,255,255,1);
+			bottom: 20px!important;
+			width: 40%;
+		}
+	}
+	&.tint:before {
+		background: transparent!important;
+	}
+}
+
+
+/* ## WP-Discuz
+--------------------------------------------- */
+#comments {
+	width: 100%;
+}
+#wpcomm textarea,#wpcomm .wc-comment-header,#wpcomm .wc-comment-footer,#wpcomm .wc-comment .wc-comment-left{ 
+    font-family: $font-family;
+ }
+#wc-comment-header { font-size: 28px;}
+
+#wpcomm .wc-field-comment textarea {
+    padding: 10px;
+    height: 150px!important;
+    }
+
+#wpcomm .wc-field-name input[type="text"],
+#wpcomm .wc-field-email input[type="email"]{
+   padding: 10px;
+   height: auto;
+}
+#wpcomm .wc-comment-right .wc-comment-text, 
+#wpcomm .wc-comment-right .wc-comment-text *,
+#wpcomm .wc_comm_form.wc_main_comm_form .wc-field-textarea .wpdiscuz-textarea-wrap textarea  {
+    font-size: 1.6rem!important;
+    line-height: unset!important;
+}
+
+#wpcomm .wc-reply .wc-comment-right .wc-comment-text, 
+#wpcomm .wc-reply .wc-comment-right .wc-comment-text * {
+    font-size: 1.6rem;
+}
