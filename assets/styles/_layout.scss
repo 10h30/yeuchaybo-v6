@@ -34,9 +34,9 @@
 .site-inner {
 	clear: both;
 	.home & {
-		margin-top: 61px;
+		padding-top: 61px;
 		@include breakpoint(md) {
-			margin-top: 101px;
+			padding-top: 101px;
 	}
 	}
 
