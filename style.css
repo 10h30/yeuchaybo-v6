@@ -869,7 +869,7 @@ th {
 }
 
 .home .site-inner {
-	margin-top: 61px;
+	padding-top: 61px;
 }
 
 .blog .site-inner,
@@ -1419,7 +1419,6 @@ img.alignright,
 
 .sticky-header .site-header {
 	position: fixed;
-	top: 0;
 }
 
 .sticky-header .site-header.shrink {
@@ -4592,7 +4591,7 @@ ul.testimonials-list h5 {
 
 @media (min-width: 896px) {
 	.home .site-inner {
-		margin-top: 101px;
+		padding-top: 101px;
 	}
 	.content-sidebar-wrap {
 		display: flex;
