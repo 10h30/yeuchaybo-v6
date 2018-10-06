@@ -2458,6 +2458,32 @@ img.alignright,
 	color: #ffffff;
 }
 
+.entry-pagination {
+	margin-bottom: 60px;
+}
+
+.entry-pagination a {
+	padding: 0.5rem 1rem;
+	color: #2a3139;
+	font-size: 1.6rem;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.entry-pagination a:hover,
+.entry-pagination a:focus {
+	color: #009cff;
+}
+
+.entry-pagination > .custom-page-links {
+	padding: 0.5rem 1rem;
+	background: #0072ff;
+	background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr="$one", endcolorstr="$two", gradienttype=1);
+	color: #ffffff;
+	border-radius: 3px;
+}
+
 /* ## Comments
 --------------------------------------------- */
 .comment-respond,
@@ -3393,6 +3419,10 @@ ul.testimonials-list h5 {
 	margin-bottom: 20px;
 }
 
+.gfpc-featured-posts > article {
+	margin-bottom: 40px;
+}
+
 .gfpc-featured-posts .entry-content {
 	clear: unset;
 }
@@ -3461,6 +3491,41 @@ ul.testimonials-list h5 {
 #wpcomm .wc-reply .wc-comment-right .wc-comment-text,
 #wpcomm .wc-reply .wc-comment-right .wc-comment-text * {
 	font-size: 1.6rem;
+}
+
+/*YCB Social Icons*/
+ul.ycb-social-icons {
+	margin: 0;
+	line-height: unset;
+}
+
+ul.ycb-social-icons li {
+	padding: 0 !important;
+	display: inline-block !important;
+	margin: 0 8px 8px 0 !important;
+	list-style-type: none !important;
+}
+
+ul.ycb-social-icons li a {
+	border-radius: 2px;
+	font-size: 20px !important;
+	font-size: 2rem !important;
+	background: #1e90ff;
+	padding: 8px;
+	color: #ffffff;
+}
+
+ul.ycb-social-icons li a:hover {
+	background: #00c6ff !important;
+	color: #ffffff !important;
+}
+
+ul.ycb-social-icons li a .svg-inline--fa {
+	width: 1.2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1.2em;
 }
 
 /* ## Front Page

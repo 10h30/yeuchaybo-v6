@@ -357,11 +357,36 @@
 	}
 
 	.active a {
-
 		@include gradient;
 		color: $white;
 	}
 }
+
+.entry-pagination {
+    margin-bottom: 60px;
+	a {
+		padding: 0.5rem 1rem;
+		color: $dark;
+		font-size: 1.6rem;
+		text-decoration: none;
+		@include transition;
+		&:hover,
+		&:focus {
+			color: $accent;
+		}
+	}
+	
+	& > .custom-page-links {
+		padding: 0.5rem 1rem;
+		@include gradient;
+		color: $white;
+		border-radius: $site-radius;
+	}
+}
+
+
+
+
 
 /* ## Comments
 --------------------------------------------- */

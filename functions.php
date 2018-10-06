@@ -244,6 +244,11 @@ function corporate_scripts_styles() {
 
 	}
 
+	// Enqueue Font-Awesome 5
+	wp_enqueue_script( 'font-awesome-free', '//use.fontawesome.com/releases/v5.3.1/js/fontawesome.js', array(), null );
+	wp_enqueue_script( 'font-awesome-brand', '//use.fontawesome.com/releases/v5.3.1/js/brands.js', array(), null );
+
+
 	// Enqueue custom theme scripts.
 	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-pro', CHILD_THEME_URI . '/assets/scripts/min/theme.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
@@ -288,6 +293,25 @@ require_once CHILD_THEME_DIR . '/includes/defaults.php';
 
 // Load recommended plugins.
 require_once CHILD_THEME_DIR . '/includes/plugins.php';
+
+add_filter( 'script_loader_tag', 'add_defer_attribute', 10, 2 );
+/**
+ * Filter the HTML script tag of `font-awesome` script to add `defer` attribute.
+ *
+ * @param string $tag    The <script> tag for the enqueued script.
+ * @param string $handle The script's registered handle.
+ *
+ * @return   Filtered HTML script tag.
+ */
+function add_defer_attribute( $tag, $handle ) {
+
+    if ( 'font-awesome' === $handle ) {
+        $tag = str_replace( ' src', ' defer src', $tag );
+    }
+
+    return $tag;
+
+}
 
 /**********************************
  *
