@@ -37,6 +37,10 @@ load_child_theme_textdomain( CHILD_TEXT_DOMAIN, apply_filters( 'child_theme_text
 // Enable support for page excerpts.
 add_post_type_support( 'page', 'excerpt' );
 
+//Add post type archive support for event
+add_post_type_support( 'event', 'genesis-cpt-archives-settings' );
+
+
 // Enable support for Gutenberg wide images.
 add_theme_support( 'align-wide' );
 
@@ -375,5 +379,3 @@ function abte_add_site_description_class( $attributes ) {
 	return $attributes;
 }
 
-//Add post type archive support
-add_post_type_support( 'event', 'genesis-cpt-archives-settings' );

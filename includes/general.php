@@ -457,6 +457,14 @@ function corporate_post_info_date( $post_info ) {
 		$post_info = '[post_date]';
 
 	}
+	global $post;
+	$EM_Event = em_get_event($post->ID, 'post_id');
+	$location = $EM_Event->output('#_LOCATIONTOWN');
+
+	if (is_post_type_archive('event')) {
+		$post_info = '[field _event_start_date date_format="d/m/Y"]';
+		$post_info .= ' - '.$location;
+	}
 
 	return $post_info;
 
