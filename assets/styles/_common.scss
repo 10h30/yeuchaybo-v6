@@ -341,13 +341,15 @@ img.alignright,
 }
 
 .wp-block-gallery {
+	margin-left: 0!important;
 
 	.blocks-gallery-image {
 		margin-right: 0;
 	}
 }
 
-.blocks-gallery-image {
+.blocks-gallery-image,
+.blocks-gallery-item {
 	display: block;
 	width: 100%;
 	margin: 0 0 6vw;

@@ -113,7 +113,7 @@
 		list-style-type: decimal;
 	}
 
-	ul > li {
+	ul:not(.no-bullets) > li {
 		list-style-type: disc;
 	}
 
