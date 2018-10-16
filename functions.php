@@ -374,3 +374,6 @@ function abte_add_site_description_class( $attributes ) {
 
 	return $attributes;
 }
+
+//Add post type archive support
+add_post_type_support( 'event', 'genesis-cpt-archives-settings' );
