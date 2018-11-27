@@ -1199,10 +1199,11 @@ th {
 
 .search-form .search-toggle {
 	display: none;
-	width: 2.5rem;
-	height: 2.5rem;
-	background-image: center/1.75rem no-repeat url(assets/images/search.svg);
+	width: 2rem;
+	height: 2rem;
+	background-image: url(assets/images/search.svg);
 	cursor: pointer;
+	background-repeat: no-repeat;
 }
 
 .shrink .search-form .search-toggle {
@@ -1211,7 +1212,7 @@ th {
 
 .search-form .search-toggle.active {
 	background-image: url(assets/images/close.svg);
-	background-size: 1.4rem;
+	background-repeat: no-repeat;
 }
 
 .shrink .search-form .search-toggle.active {

@@ -13,6 +13,10 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: archive-event.php:3
+msgid "Events Archive"
+msgstr ""
+
 #: templates/page-boxed.php:7
 msgid "Boxed Template"
 msgstr ""
